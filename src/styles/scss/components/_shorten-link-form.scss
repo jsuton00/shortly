@@ -6,8 +6,15 @@
 	gap: $spacing-base;
 	width: 100%;
 
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 	&-input-section {
 		width: 70%;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 	}
 
 	&-input {
@@ -39,6 +46,10 @@
 
 	&-submit-section {
 		width: 20%;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 	}
 	&-submit {
 		border: $spacing-primary solid $cyan;

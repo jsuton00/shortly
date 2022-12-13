@@ -8,6 +8,12 @@
 	height: 100%;
 	padding: $spacing-base 0;
 
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+		gap: $spacing-base;
+	}
+
 	&-card {
 		display: flex;
 		flex-direction: column;

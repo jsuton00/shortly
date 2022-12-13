@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { useToggle } from './hooks/useToggle';
+import { useViewportContext } from './hooks/useViewport';
 import AnalyticsPage from './pages/AnalyticsPage';
 import BlogPage from './pages/BlogPage';
 import BrandedLinksPage from './pages/BrandedLinksPage';
@@ -16,9 +18,16 @@ import SignUpPage from './pages/SignUpPage';
 import SupportPage from './pages/SupportPage';
 
 const App = () => {
+	const [width] = useViewportContext();
+	const [isOpen, handleToggle, handleClose] = useToggle();
 	return (
 		<>
-			<Header />
+			<Header
+				width={width}
+				isOpen={isOpen}
+				handleToggle={handleToggle}
+				handleClose={handleClose}
+			/>
 			<main className="main">
 				<Routes>
 					<Route path="/" element={<HomePage />} />

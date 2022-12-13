@@ -7,13 +7,23 @@ import {
 	HEADER_NAV_LINKS,
 } from '../constants/navlinks';
 
-export const HeaderNavbar = () => {
+export const HeaderNavbar = (props) => {
+	const { handleClose } = props;
+
+	const onClick = () => {
+		return handleClose();
+	};
 	return (
 		<div className="header-navbar">
 			{HEADER_NAV_LINKS.length > 0 &&
 				HEADER_NAV_LINKS.map((link) => {
 					return (
-						<Link key={link} to={link} className="header-navbar-nav-item-link">
+						<Link
+							key={link}
+							to={link}
+							onClick={onClick}
+							className="header-navbar-nav-item-link"
+						>
 							<div className="header-navbar-nav-item">
 								<p className="header-navbar-nav-item-text">{link}</p>
 							</div>
@@ -24,15 +34,18 @@ export const HeaderNavbar = () => {
 	);
 };
 
-export const HeaderAuth = () => {
+export const HeaderAuth = (props) => {
+	const { handleClose } = props;
 	const navigate = useNavigate();
 
 	const onClickLogin = () => {
-		return navigate('/login');
+		navigate('/login');
+		handleClose();
 	};
 
 	const onClickSignUp = () => {
-		return navigate('/signup');
+		navigate('/signup');
+		handleClose();
 	};
 	return (
 		<>
