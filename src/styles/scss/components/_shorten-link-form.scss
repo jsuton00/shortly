@@ -1,0 +1,52 @@
+.shorten-link-form {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: $spacing-base;
+	width: 100%;
+
+	&-input-section {
+		width: 70%;
+	}
+
+	&-input {
+		border: $spacing-primary solid $white;
+		border-radius: $spacing-sm;
+		width: 100%;
+		padding: $spacing-sm $spacing-xxl;
+
+		&::-webkit-input-placeholder {
+			font-weight: $poppins-medium;
+		}
+
+		&::-moz-placeholder {
+			font-weight: $poppins-medium;
+		}
+
+		&:-ms-input-placeholder {
+			font-weight: $poppins-medium;
+		}
+
+		&::-ms-input-placeholder {
+			font-weight: $poppins-medium;
+		}
+
+		&::placeholder {
+			font-weight: $poppins-medium;
+		}
+	}
+
+	&-submit-section {
+		width: 20%;
+	}
+	&-submit {
+		border: $spacing-primary solid $cyan;
+		background-color: $cyan;
+		border-radius: $spacing-sm;
+		color: $white;
+		font-weight: $poppins-semibold;
+		width: 100%;
+		padding: $spacing-sm $spacing-xxl;
+	}
+}

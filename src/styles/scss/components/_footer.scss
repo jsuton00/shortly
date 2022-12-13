@@ -1,0 +1,55 @@
+.footer {
+	width: 100%;
+	background-color: $veryDarkViolet;
+
+	&-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: $spacing-sm;
+		padding: $spacing-base;
+	}
+
+	&-brand-section {
+		flex-basis: 24%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: $spacing-sm 0;
+	}
+
+	&-nav-section {
+		flex-basis: 45%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: $spacing-sm 0;
+		color: $white;
+	}
+
+	&-social-section {
+		flex-basis: 24%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: $spacing-base;
+		padding: $spacing-sm 0;
+		color: $white;
+	}
+
+	&-social-link {
+		cursor: pointer;
+	}
+
+	&-nav-menu {
+		display: flex;
+		flex-direction: column;
+		gap: $spacing-base;
+		padding: 0;
+
+		&-nav-item-link {
+			color: $grayishViolet;
+			text-transform: capitalize;
+		}
+	}
+}

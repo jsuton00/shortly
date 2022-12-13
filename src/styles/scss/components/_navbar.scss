@@ -1,0 +1,36 @@
+.header {
+	&-navbar {
+		display: flex;
+		align-items: center;
+		gap: $spacing-base;
+		padding: 0 $spacing-base;
+
+		&-nav-item {
+			font-weight: $poppins-semibold;
+			color: $grayishViolet;
+			text-align: center;
+			text-transform: capitalize;
+		}
+	}
+	&-auth-button {
+		border-radius: $spacing-xxl;
+		font-weight: $poppins-semibold;
+		padding: $spacing-xxs $spacing-lg;
+	}
+	&-login {
+		border: none;
+		background-color: transparent;
+		color: $grayishViolet;
+	}
+	&-signup {
+		border: $spacing-primary solid $cyan;
+		background-color: $cyan;
+		color: $white;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			color: $cyan;
+		}
+	}
+}
